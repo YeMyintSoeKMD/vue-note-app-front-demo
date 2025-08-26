@@ -1,13 +1,13 @@
 <template>
   <div
-    class="bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
+    class="bg-white rounded-lg shadow-xs border border-gray-200 hover:shadow-md transition-shadow"
   >
     <div class="p-4">
       <!-- Edit form: to show/hide conditionally  -->
       <div v-if="false" class="space-y-4">
         <input
           placeholder="Category name"
-          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         />
         <div class="flex gap-2">
           <!-- tick the border when clicked  -->

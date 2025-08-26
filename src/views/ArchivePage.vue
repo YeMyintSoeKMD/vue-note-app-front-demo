@@ -22,7 +22,7 @@
           <MagnifyingGlassIcon class="absolute left-3 top-3 h-4 w-4 text-gray-400" />
           <input
             placeholder="Search archived notes..."
-            class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
         </div>
       </div>
@@ -38,7 +38,7 @@
         <div
           v-for="note in archivedNotes"
           :key="note.id"
-          class="bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
+          class="bg-white rounded-lg shadow-xs border border-gray-200 hover:shadow-md transition-shadow"
         >
           <div class="p-4 pb-3">
             <div class="flex items-start justify-between">

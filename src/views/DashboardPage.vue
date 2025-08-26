@@ -39,12 +39,12 @@
           <MagnifyingGlassIcon class="size-5 absolute left-3 top-1/2 transform -translate-y-1/2" />
           <input
             placeholder="Search notes..."
-            class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
         </div>
         <div class="flex items-center gap-2">
           <div class="relative">
-            <select class="appearance-none bg-white border border-gray-300 rounded-md px-3 py-2 pr-8 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <select class="appearance-none bg-white border border-gray-300 rounded-md px-3 py-2 pr-8 focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:border-transparent">
               <option
                 v-for="category in categories"
                 :key="category"
@@ -100,7 +100,7 @@
         <div
           v-for="note in notes"
           :key="note.id"
-          class="bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
+          class="bg-white rounded-lg shadow-xs border border-gray-200 hover:shadow-md transition-shadow"
         >
           <div class="p-4 pb-3">
             <div class="flex items-start justify-between">

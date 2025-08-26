@@ -24,7 +24,7 @@
 
     <div class="p-6 max-w-4xl mx-auto">
       <!-- Add New Category Form: to show/hide conditionally -->
-      <div v-if="false" class="bg-white rounded-lg shadow-sm border border-gray-200 mb-6">
+      <div v-if="false" class="bg-white rounded-lg shadow-xs border border-gray-200 mb-6">
         <div class="p-6">
           <h2 class="text-xl font-semibold mb-4">Add New Category</h2>
           <div class="space-y-4">
@@ -34,7 +34,7 @@
                 id="categoryName"
                 type="text"
                 placeholder="Enter category name..."
-                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
             </div>
             <div class="space-y-2">

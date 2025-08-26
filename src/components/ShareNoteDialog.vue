@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isOpen" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div v-if="isOpen" class="fixed inset-0 bg-black/75 flex items-center justify-center z-50">
     <div class="bg-white rounded-lg p-6 max-w-md w-full mx-4">
       <div class="mb-4">
         <h3 class="text-lg font-semibold mb-2">Share Note</h3>
@@ -13,20 +13,12 @@
           <div class="flex gap-2">
             <div class="relative flex-1">
               <MagnifyingGlassIcon class="absolute left-3 top-3 h-4 w-4 text-gray-400" />
-              <input
-                id="email"
-                type="email"
-                placeholder="Enter email address"
-                v-model="currentEmail"
+              <input id="email" type="email" placeholder="Enter email address" v-model="currentEmail"
                 @keypress="handleKeyPress"
-                class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
+                class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
             </div>
-            <button
-              @click="addEmail"
-              :disabled="!currentEmail"
-              class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition duration-200"
-            >
+            <button @click="addEmail" :disabled="!currentEmail"
+              class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition duration-200">
               Add
             </button>
           </div>
@@ -34,11 +26,8 @@
 
         <!-- Email Tags -->
         <div v-if="emails.length > 0" class="flex flex-wrap gap-2">
-          <span
-            v-for="email in emails"
-            :key="email"
-            class="inline-flex items-center gap-1 px-2 py-1 bg-gray-100 text-gray-800 text-sm rounded-full"
-          >
+          <span v-for="email in emails" :key="email"
+            class="inline-flex items-center gap-1 px-2 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">
             {{ email }}
             <button @click="removeEmail(email)" class="ml-1 hover:bg-gray-300 rounded-full p-0.5">
               <XMarkIcon class="size-5" />
@@ -48,15 +37,12 @@
 
         <!-- Actions -->
         <div class="flex justify-end gap-2">
-          <button
-            @click="$emit('close')"
-            class="px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition duration-200"
-          >
+          <button @click="$emit('close')"
+            class="px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition duration-200">
             Cancel
           </button>
           <button
-            class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition duration-200 flex items-center"
-          >
+            class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition duration-200 flex items-center">
             <ShareIcon class="size-5 mr-2" />
             Share Note
           </button>

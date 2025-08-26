@@ -5,7 +5,8 @@
       <div class="flex items-center justify-between px-6 max-w-4xl mx-auto">
         <div class="flex items-center gap-4">
           <router-link to="/dashboard">
-            <button class="flex items-center px-3 py-2 text-sm text-gray-600 hover:text-gray-900 transition duration-200">
+            <button
+              class="flex items-center px-3 py-2 text-sm text-gray-600 hover:text-gray-900 transition duration-200">
               <ArrowLeftIcon class="size-5 mr-2" />
               Back
             </button>
@@ -20,10 +21,8 @@
       <div class="mb-6">
         <div class="relative max-w-md">
           <MagnifyingGlassIcon class="absolute left-3 top-3 h-4 w-4 text-gray-400" />
-          <input
-            placeholder="Search archived notes..."
-            class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          />
+          <input placeholder="Search archived notes..."
+            class="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-md focus:outline-hidden focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
         </div>
       </div>
 
@@ -35,15 +34,12 @@
         </p>
       </div>
       <div v-else class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div
-          v-for="note in archivedNotes"
-          :key="note.id"
-          class="bg-white rounded-lg shadow-xs border border-gray-200 hover:shadow-md transition-shadow"
-        >
+        <div v-for="note in archivedNotes" :key="note.id"
+          class="bg-white rounded-lg shadow-xs border border-gray-200 hover:shadow-md transition-shadow">
           <div class="p-4 pb-3">
             <div class="flex items-start justify-between">
               <div class="flex-1">
-                <h3 class="text-lg font-semibold line-clamp-1 text-gray-900">{{ note.title }}</h3>
+                <h3 class="text-lg font-semibold text-gray-900">{{ note.title }}</h3>
                 <div class="flex items-center gap-2 mt-2">
                   <span class="px-2 py-1 text-xs bg-gray-100 text-gray-800 rounded-full">
                     {{ note.category }}
@@ -54,23 +50,21 @@
                 </div>
               </div>
               <div class="relative">
-                <button
-                  @click="toggleDropdown(note.id)"
-                  class="p-2 text-gray-400 hover:text-gray-600 rounded-full hover:bg-gray-100"
-                >
+                <button @click="toggleDropdown(note.id)"
+                  class="p-2 text-gray-400 hover:text-gray-600 rounded-full hover:bg-gray-100">
                   <EllipsisVerticalIcon class="size-5" />
                 </button>
-                <div
-                  v-if="activeDropdown === note.id"
-                  class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-200 z-10"
-                >
+                <div v-if="activeDropdown === note.id"
+                  class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg border border-gray-200 z-10">
                   <div class="py-1">
-                    <button class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
+                    <button
+                      class="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 flex items-center">
                       <ArrowRightIcon class="size-5 mr-2" />
                       Restore
                     </button>
-                    <hr class="my-1">
-                    <button class="block w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-red-50 flex items-center">
+                    <hr class="my-1 border border-gray-200">
+                    <button
+                      class="block w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-red-50 flex items-center">
                       <TrashIcon class="size-5 mr-2" />
                       Delete Permanently
                     </button>
@@ -105,13 +99,10 @@
         </p>
         <div class="flex justify-end gap-2">
           <button
-            class="px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition duration-200"
-          >
+            class="px-4 py-2 border border-gray-300 text-gray-700 rounded-md hover:bg-gray-50 transition duration-200">
             Cancel
           </button>
-          <button
-            class="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition duration-200"
-          >
+          <button class="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition duration-200">
             Delete Permanently
           </button>
         </div>
